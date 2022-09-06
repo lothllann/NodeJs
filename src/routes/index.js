@@ -8,9 +8,9 @@ const routes = (app) => {
     })
 
     app.use(express.json(),
-     livros,
-     autores
-     )
+        livros,
+        autores
+    )
 }
 
 export default routes
