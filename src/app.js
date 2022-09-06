@@ -1,4 +1,11 @@
 import express from "express";
+import db from "./config/dbConnect.js";
+import ds from "./config/dbConnect.js"
+
+db.on("erro", console.log.bind(console, 'Erro de Conexão'));
+db.once("once", ()=>{
+    console.log('Conecão com o banco feita com sucesso')
+})
 
 const app = express();
 app.use(express.json());
